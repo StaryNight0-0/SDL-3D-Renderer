@@ -63,6 +63,7 @@ CMAKE_BINARY_DIR = /home/starrynightdan/GIT/Caboodle/Build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/Render.dir/all
 all: CMakeFiles/Caboodle.dir/all
 .PHONY : all
 
@@ -71,14 +72,41 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/Render.dir/clean
 clean: CMakeFiles/Caboodle.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Render.dir
+
+# All Build rule for target.
+CMakeFiles/Render.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Render.dir/build.make CMakeFiles/Render.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Render.dir/build.make CMakeFiles/Render.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/starrynightdan/GIT/Caboodle/Build/CMakeFiles --progress-num=3,4 "Built target Render"
+.PHONY : CMakeFiles/Render.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Render.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/starrynightdan/GIT/Caboodle/Build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Render.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/starrynightdan/GIT/Caboodle/Build/CMakeFiles 0
+.PHONY : CMakeFiles/Render.dir/rule
+
+# Convenience name for target.
+Render: CMakeFiles/Render.dir/rule
+.PHONY : Render
+
+# clean rule for target.
+CMakeFiles/Render.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Render.dir/build.make CMakeFiles/Render.dir/clean
+.PHONY : CMakeFiles/Render.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Caboodle.dir
 
 # All Build rule for target.
-CMakeFiles/Caboodle.dir/all:
+CMakeFiles/Caboodle.dir/all: CMakeFiles/Render.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Caboodle.dir/build.make CMakeFiles/Caboodle.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Caboodle.dir/build.make CMakeFiles/Caboodle.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/starrynightdan/GIT/Caboodle/Build/CMakeFiles --progress-num=1,2 "Built target Caboodle"
@@ -86,7 +114,7 @@ CMakeFiles/Caboodle.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Caboodle.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/starrynightdan/GIT/Caboodle/Build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/starrynightdan/GIT/Caboodle/Build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Caboodle.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/starrynightdan/GIT/Caboodle/Build/CMakeFiles 0
 .PHONY : CMakeFiles/Caboodle.dir/rule

@@ -1,5 +1,5 @@
-CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.o: \
- /home/starrynightdan/GIT/Caboodle/src/Caboodle/Caboodle.cpp \
+CMakeFiles/Render.dir/src/Render/Renderer.cpp.o: \
+ /home/starrynightdan/GIT/Caboodle/src/Render/Renderer.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -149,9 +149,10 @@ CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.o: \
  /usr/include/c++/13/bits/locale_facets.tcc \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
- /usr/include/c++/13/bits/istream.tcc /usr/include/SDL2/SDL.h \
- /usr/include/SDL2/SDL_main.h /usr/include/SDL2/SDL_stdinc.h \
- /usr/include/SDL2/SDL_config.h \
+ /usr/include/c++/13/bits/istream.tcc \
+ /home/starrynightdan/GIT/Caboodle/src/Render/Renderer.h \
+ /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
+ /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
  /usr/include/SDL2/SDL_platform.h /usr/include/SDL2/begin_code.h \
  /usr/include/SDL2/close_code.h /usr/include/c++/13/stdlib.h \
@@ -299,37 +300,4 @@ CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.o: \
  /usr/include/SDL2/SDL_render.h /usr/include/SDL2/SDL_shape.h \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
- /usr/include/SDL2/SDL_misc.h /usr/include/vulkan/vulkan.hpp \
- /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
- /usr/include/c++/13/bits/algorithmfwd.h \
- /usr/include/c++/13/bits/stl_heap.h \
- /usr/include/c++/13/bits/uniform_int_dist.h \
- /usr/include/c++/13/bits/stl_tempbuf.h \
- /usr/include/c++/13/pstl/glue_algorithm_defs.h \
- /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/array \
- /usr/include/c++/13/compare /usr/include/vulkan/vulkan.h \
- /usr/include/vulkan/vk_platform.h /usr/include/vulkan/vulkan_core.h \
- /usr/include/vk_video/vulkan_video_codec_h264std.h \
- /usr/include/vk_video/vulkan_video_codecs_common.h \
- /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
- /usr/include/vk_video/vulkan_video_codec_h264std.h \
- /usr/include/vk_video/vulkan_video_codec_h265std.h \
- /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
- /usr/include/vk_video/vulkan_video_codec_h265std.h \
- /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
- /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
- /usr/include/vulkan/vulkan_hpp_macros.hpp /usr/include/c++/13/ciso646 \
- /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
- /usr/include/c++/13/bits/stl_vector.h \
- /usr/include/c++/13/bits/stl_bvector.h \
- /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/cassert \
- /usr/include/assert.h /usr/include/dlfcn.h \
- /usr/include/x86_64-linux-gnu/bits/dlfcn.h \
- /usr/include/x86_64-linux-gnu/bits/dl_find_object.h \
- /usr/include/vulkan/vulkan_enums.hpp \
- /usr/include/vulkan/vulkan_to_string.hpp /usr/include/c++/13/sstream \
- /usr/include/c++/13/bits/sstream.tcc \
- /usr/include/vulkan/vulkan_handles.hpp \
- /usr/include/vulkan/vulkan_structs.hpp /usr/include/c++/13/cstring \
- /usr/include/vulkan/vulkan_funcs.hpp \
- /home/starrynightdan/GIT/Caboodle/src/Render/Renderer.h
+ /usr/include/SDL2/SDL_misc.h

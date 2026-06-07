@@ -92,6 +92,7 @@ Caboodle_EXTERNAL_OBJECTS =
 
 Caboodle: CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.o
 Caboodle: CMakeFiles/Caboodle.dir/build.make
+Caboodle: libRender.a
 Caboodle: /usr/lib/x86_64-linux-gnu/libSDL2.so
 Caboodle: /usr/lib/x86_64-linux-gnu/libvulkan.so
 Caboodle: CMakeFiles/Caboodle.dir/link.txt

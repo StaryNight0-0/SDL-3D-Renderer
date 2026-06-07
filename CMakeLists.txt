@@ -11,8 +11,28 @@ set(CMAKE_CXX_EXTENSIONS        OFF)
 find_package(SDL2 REQUIRED CONFIG REQUIRED COMPONENTS SDL2)
 find_package(Vulkan REQUIRED)
 
+# ---------------------------------------------------------------
+
+add_library(Render STATIC
+src/Render/Renderer.cpp
+)
+
+target_include_directories(Render PUBLIC src)
+target_link_libraries(Render PRIVATE SDL2::SDL2)
+
+# -----------------------------------------------------------------------------
+
+
+
+
 add_executable(${PROJECT_NAME} src/Caboodle/Caboodle.cpp)
-target_link_libraries(${PROJECT_NAME} PRIVATE SDL2::SDL2  PRIVATE Vulkan::Vulkan)
+
+target_include_directories(${PROJECT_NAME} PRIVATE src)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE 
+     Render
+     SDL2::SDL2  
+     Vulkan::Vulkan)
 
 
 # --------------------------------------------------------------

@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Render
+
+# Build rule for target.
+Render: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Render
+.PHONY : Render
+
+# fast build rule for target.
+Render/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Render.dir/build.make CMakeFiles/Render.dir/build
+.PHONY : Render/fast
+
+#=============================================================================
 # Target rules for targets named Caboodle
 
 # Build rule for target.
@@ -153,6 +166,30 @@ src/Caboodle/Caboodle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Caboodle.dir/build.make CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.s
 .PHONY : src/Caboodle/Caboodle.cpp.s
 
+src/Render/Renderer.o: src/Render/Renderer.cpp.o
+.PHONY : src/Render/Renderer.o
+
+# target to build an object file
+src/Render/Renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Render.dir/build.make CMakeFiles/Render.dir/src/Render/Renderer.cpp.o
+.PHONY : src/Render/Renderer.cpp.o
+
+src/Render/Renderer.i: src/Render/Renderer.cpp.i
+.PHONY : src/Render/Renderer.i
+
+# target to preprocess a source file
+src/Render/Renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Render.dir/build.make CMakeFiles/Render.dir/src/Render/Renderer.cpp.i
+.PHONY : src/Render/Renderer.cpp.i
+
+src/Render/Renderer.s: src/Render/Renderer.cpp.s
+.PHONY : src/Render/Renderer.s
+
+# target to generate assembly for a file
+src/Render/Renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Render.dir/build.make CMakeFiles/Render.dir/src/Render/Renderer.cpp.s
+.PHONY : src/Render/Renderer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +199,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Caboodle"
+	@echo "... Render"
 	@echo "... src/Caboodle/Caboodle.o"
 	@echo "... src/Caboodle/Caboodle.i"
 	@echo "... src/Caboodle/Caboodle.s"
+	@echo "... src/Render/Renderer.o"
+	@echo "... src/Render/Renderer.i"
+	@echo "... src/Render/Renderer.s"
 .PHONY : help
 
 
