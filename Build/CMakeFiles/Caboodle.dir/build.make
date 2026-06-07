@@ -69,30 +69,31 @@ include CMakeFiles/Caboodle.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Caboodle.dir/flags.make
 
-CMakeFiles/Caboodle.dir/src/main.cpp.o: CMakeFiles/Caboodle.dir/flags.make
-CMakeFiles/Caboodle.dir/src/main.cpp.o: /home/starrynightdan/GIT/Caboodle/src/main.cpp
-CMakeFiles/Caboodle.dir/src/main.cpp.o: CMakeFiles/Caboodle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/starrynightdan/GIT/Caboodle/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Caboodle.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Caboodle.dir/src/main.cpp.o -MF CMakeFiles/Caboodle.dir/src/main.cpp.o.d -o CMakeFiles/Caboodle.dir/src/main.cpp.o -c /home/starrynightdan/GIT/Caboodle/src/main.cpp
+CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.o: CMakeFiles/Caboodle.dir/flags.make
+CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.o: /home/starrynightdan/GIT/Caboodle/src/Caboodle/Caboodle.cpp
+CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.o: CMakeFiles/Caboodle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/starrynightdan/GIT/Caboodle/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.o -MF CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.o.d -o CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.o -c /home/starrynightdan/GIT/Caboodle/src/Caboodle/Caboodle.cpp
 
-CMakeFiles/Caboodle.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Caboodle.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/starrynightdan/GIT/Caboodle/src/main.cpp > CMakeFiles/Caboodle.dir/src/main.cpp.i
+CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/starrynightdan/GIT/Caboodle/src/Caboodle/Caboodle.cpp > CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.i
 
-CMakeFiles/Caboodle.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Caboodle.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/starrynightdan/GIT/Caboodle/src/main.cpp -o CMakeFiles/Caboodle.dir/src/main.cpp.s
+CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/starrynightdan/GIT/Caboodle/src/Caboodle/Caboodle.cpp -o CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.s
 
 # Object files for target Caboodle
 Caboodle_OBJECTS = \
-"CMakeFiles/Caboodle.dir/src/main.cpp.o"
+"CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.o"
 
 # External object files for target Caboodle
 Caboodle_EXTERNAL_OBJECTS =
 
-Caboodle: CMakeFiles/Caboodle.dir/src/main.cpp.o
+Caboodle: CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.o
 Caboodle: CMakeFiles/Caboodle.dir/build.make
 Caboodle: /usr/lib/x86_64-linux-gnu/libSDL2.so
+Caboodle: /usr/lib/x86_64-linux-gnu/libvulkan.so
 Caboodle: CMakeFiles/Caboodle.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/starrynightdan/GIT/Caboodle/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Caboodle"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Caboodle.dir/link.txt --verbose=$(VERBOSE)

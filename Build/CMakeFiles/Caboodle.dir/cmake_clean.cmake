@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Caboodle.dir/src/main.cpp.o"
-  "CMakeFiles/Caboodle.dir/src/main.cpp.o.d"
+  "CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.o"
+  "CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.o.d"
   "Caboodle"
   "Caboodle.pdb"
 )

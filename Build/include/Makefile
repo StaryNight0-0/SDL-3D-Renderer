@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/starrynightdan/GIT/Caboodle/Build/CMakeFiles /home/starrynightdan/GIT/Caboodle/Build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/starrynightdan/GIT/Caboodle/Build && $(CMAKE_COMMAND) -E cmake_progress_start /home/starrynightdan/GIT/Caboodle/Build/CMakeFiles /home/starrynightdan/GIT/Caboodle/Build/include//CMakeFiles/progress.marks
+	cd /home/starrynightdan/GIT/Caboodle/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/starrynightdan/GIT/Caboodle/Build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/starrynightdan/GIT/Caboodle/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,55 +103,32 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/starrynightdan/GIT/Caboodle/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/starrynightdan/GIT/Caboodle/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/starrynightdan/GIT/Caboodle/Build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named Caboodle
+# Convenience name for target.
+include/CMakeFiles/include.dir/rule:
+	cd /home/starrynightdan/GIT/Caboodle/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/CMakeFiles/include.dir/rule
+.PHONY : include/CMakeFiles/include.dir/rule
 
-# Build rule for target.
-Caboodle: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Caboodle
-.PHONY : Caboodle
+# Convenience name for target.
+include: include/CMakeFiles/include.dir/rule
+.PHONY : include
 
 # fast build rule for target.
-Caboodle/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Caboodle.dir/build.make CMakeFiles/Caboodle.dir/build
-.PHONY : Caboodle/fast
-
-src/Caboodle/Caboodle.o: src/Caboodle/Caboodle.cpp.o
-.PHONY : src/Caboodle/Caboodle.o
-
-# target to build an object file
-src/Caboodle/Caboodle.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Caboodle.dir/build.make CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.o
-.PHONY : src/Caboodle/Caboodle.cpp.o
-
-src/Caboodle/Caboodle.i: src/Caboodle/Caboodle.cpp.i
-.PHONY : src/Caboodle/Caboodle.i
-
-# target to preprocess a source file
-src/Caboodle/Caboodle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Caboodle.dir/build.make CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.i
-.PHONY : src/Caboodle/Caboodle.cpp.i
-
-src/Caboodle/Caboodle.s: src/Caboodle/Caboodle.cpp.s
-.PHONY : src/Caboodle/Caboodle.s
-
-# target to generate assembly for a file
-src/Caboodle/Caboodle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Caboodle.dir/build.make CMakeFiles/Caboodle.dir/src/Caboodle/Caboodle.cpp.s
-.PHONY : src/Caboodle/Caboodle.cpp.s
+include/fast:
+	cd /home/starrynightdan/GIT/Caboodle/Build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/include.dir/build.make include/CMakeFiles/include.dir/build
+.PHONY : include/fast
 
 # Help Target
 help:
@@ -161,10 +138,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Caboodle"
-	@echo "... src/Caboodle/Caboodle.o"
-	@echo "... src/Caboodle/Caboodle.i"
-	@echo "... src/Caboodle/Caboodle.s"
+	@echo "... include"
 .PHONY : help
 
 
@@ -176,6 +150,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/starrynightdan/GIT/Caboodle/Build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
