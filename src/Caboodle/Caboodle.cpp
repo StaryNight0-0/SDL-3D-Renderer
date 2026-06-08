@@ -6,8 +6,9 @@
 #include "Render/Renderer.h"
 #include <cstdlib>
 
-
-
+Render render;
+SDL_Event event;
+const Uint8* state = SDL_GetKeyboardState(NULL);
 bool isRunning = true;
 
 	
@@ -15,20 +16,24 @@ bool isRunning = true;
 
   void KeyMapping(){
 		while(SDL_PollEvent(&event)){
-			if(event.type == SDL_EVENT_QUIT){
-				isRunning = false;
-			}
-			else if(event.key.key == SDLK_ESCAPE){
+			if(event.type == SDL_WINDOWEVENT_CLOSE){
 				isRunning = false;
 			}
 		}
+
+          if (state[SDL_SCANCODE_ESCAPE]){
+		isRunning = false;
+	}
+	else if(state[SDL_SCANCODE_SPACE]){
+		std::cout << "Space is being pressed" << std::endl;
+	}
 	}
 
 
 int main(int argc, char* argv[]) {
 
 while(isRunning){
-		Render::Draw();
+		render.Draw();
 		KeyMapping();
 	}
 
