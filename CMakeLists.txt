@@ -13,8 +13,8 @@ find_package(Vulkan REQUIRED)
 
 # ---------------------------------------------------------------
 
-add_library(Render STATIC
-src/Render/Renderer.cpp
+add_library(Vulkan STATIC
+
 )
 
 target_include_directories(Render PUBLIC src)
