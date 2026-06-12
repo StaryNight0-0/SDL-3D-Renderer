@@ -1,9 +1,9 @@
 #include <iostream>
 #include <glad/glad.h>
 #include "Shaders.h"
-#include <vectors>
+#include <vector>
 
-GLuint Shaders::compileShader(GLuint type , const std:string &source){
+GLuint Shaders::compileShader(GLuint type , const std::string &source){
 
 GLuint shaderObject;
 
@@ -15,7 +15,7 @@ else if(type == GL_FRAGMENT_SHADER){
 	}
 
 const char* src = source.c_str();	
-glShaderSource(shaderObject, 1, &src, nullptr);
+glShaderSource(shaderObject, 1, &src, NULL);
 glCompileShader(shaderObject);
 	
 
@@ -26,14 +26,16 @@ return shaderObject;
 GLuint Shaders::CreateShader(const std::string &VertexShader, const std::string &FragmentShader){
 
 GLuint Object = glCreateProgram();
-GLuint myVertexShader = CompileShader(GL_VERTEX_SHADER, VertexShader);
-GLuint myFragmentShader = CompileShader(GL_FRAGMENT_SHADER, FragmentShader);
+GLuint myVertexShader = compileShader(GL_VERTEX_SHADER, gVertexShaderSource);
+GLuint myFragmentShader = compileShader(GL_FRAGMENT_SHADER, gFragmentShaderSource);
 
 glAttachShader(Object, myVertexShader);
 glAttachShader(Object, myFragmentShader);
 glLinkProgram(Object);
-
 glValidateProgram(Object);
+glUseProgram(Object);
+glDeleteShader(myVertexShader);
+glDeleteShader(myFragmentShader);
 
 return Object;
 }
@@ -59,10 +61,11 @@ void Shaders::VertexSpec(){
 
 	glGenBuffers(1,&gVertexBuffer);
 	glBindBuffer(GL_ARRAY_BUFFER, gVertexBuffer);
-	glBufferData(GL_ARRAY_BUFFER,vertexPosition.size() * sizeof(GLfloat), vertexPosition.data(), GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER,sizeof(vertexPosition), vertexPosition.data(), GL_STATIC_DRAW);
 
+	
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
 	glBindVertexArray(0);
 	glDisableVertexAttribArray(0);
 }

@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <SDL2/SDL.h>
+#include "Window.h"
 
 
 class MainLoop{
@@ -15,5 +16,7 @@ void loop();
 void preDraw();
 void draw();
 void Input();
+
+Window win;
 
 };

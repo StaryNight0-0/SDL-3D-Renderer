@@ -2,45 +2,53 @@
 #include "MainLoop.h"
 #include "glad/glad.h"
 #include "Window.h"
-
-Window win;
-
+#include "Shaders/Shaders.h"
 
 
-//void MainLoop::preDraw(){
+Shaders shader;
+
+
+void MainLoop::preDraw(){
 
 //glDisable(GL_DEPTH_TEST);
 //glDisable(GL_CULL_FACE);
 
-//glViewport(0,0,win.screenWidth,win.screenHeight);
-//glClearColor(1.f,1.f,0.f,1.f);
-
-//glUseProgram(gPipelineShader);	
-
-//}
+glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
+glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 
-//void MainLoop::draw(){
+//shader.gPipelineShader = shader.CreateShader(shader.gVertexShaderSource,shader.gFragmentShaderSource);	
 
-//glBindVertexArray(gVertexArray);
-//glBindBuffer(GL_ARRAY_BUFFER, gVertexBuffer);
+}
+
+
+void MainLoop::draw(){
+
+
+//glUseProgram(shader.gPipelineShader);	
+//glBindVertexArray(shader.gVertexArray);
+//glBindBuffer(GL_ARRAY_BUFFER, shader.gVertexBuffer);
 
 //glDrawArrays(GL_TRIANGLES,0,3);
-//}
+
+SDL_GL_SwapWindow(win.window);
+}
+
 
 
 void MainLoop::loop(){
 
-	while(!quit){
-		Input();
-		//preDraw();
-	//	draw();
+        win.init();
 
-		glClearColor(0.7f, 0.9f, 0.1f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
-		SDL_GL_SwapWindow(win.window);
+	while(!quit){
+		
+		Input();
+		preDraw();
+		draw();
 		SDL_Delay(1);
-	}	
+	}
+
+	win.cleanup();
 }
 
 

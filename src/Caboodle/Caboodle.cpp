@@ -16,17 +16,8 @@
 int main(int argc, char* argv[]) {
 
 MainLoop mainloop;
-Window win;
 
-win.init();
 mainloop.loop();
-
-
-win.cleanup();
-	
-
-
-
 
 
 return 0;
